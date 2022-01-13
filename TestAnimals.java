@@ -3,6 +3,7 @@ package com.katapios.animals;
 public class TestAnimals {
 
     //object must be static in static main method
+    //or you can call it in main static method without word static
     static Cat cat = new Cat("Janki");
     static Cat homelessCat = new Cat();
 
@@ -39,6 +40,20 @@ public class TestAnimals {
         myFish.eat();
         ((Fish) myFish).play();
         myFish.walk();
+
+        System.out.println("");
+
+        //call not static methods in static class
+        Hedgehog h = new Hedgehog();
+
+        h.play();
+        h.setName("sonic");
+        System.out.println(h.getName());
+
+        //static hero
+        Hedgehog.hedgehogName();
+        Hedgehog.gettingApple();
+
     }
 
 }
